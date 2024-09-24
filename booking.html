@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 開頭設定CSS連結路徑 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- 設定網頁標題 -->
+  <title>Movie Seat Booking</title>
+</head>
+<body>
+  <!-- 設計一個container，主要是針對最上方的選單列表 -->
+  <div class="movie-container">
+    <label>選擇電影:</label>
+    <select id="movie">
+      <!-- 設計三個選項，主要是撰寫票價選擇 -->
+      <option value="100">流浪吉普賽($100)</option>
+      <option value="120">小丑：雙重瘋狂($120)</option>
+      <option value="90">T邪惡勿語($90)</option>
+    </select>
+  </div>
+
+  <!-- 新增訂票日期 -->
+  <div class="booking-details">
+    <label for="booking-date">訂票日期:</label>
+    <input type="date" id="booking-date" required>
+    
+    <label for="phone-number">手機號碼:</label>
+    <input type="tel" id="phone-number" placeholder="請輸入手機號碼" required>
+  </div>
+
+  <!-- 展示座位的三種型態 -->
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <small>N/A</small>
+    </li>
+    <li>
+      <div class="seat selected"></div>
+      <small>Selected</small>  
+    </li>
+    <li>
+      <div class="seat occupied"></div>
+      <small>Occupied</small>
+    </li>
+  </ul>
+
+  <!-- 把螢幕與座位規劃在一區 -->
+  <div class="container">
+    <div class="screen"></div>
+    <!-- 一排座位8個，共計規劃六排 -->
+    <div class="row">
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+
+  <p class="text">您已經選擇<span id="count">0</span> 個座位票價總共 $<span id="total">0</span></p>
+  <!-- 設定js檔案路徑 -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</body>
+</html>
